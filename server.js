@@ -12,11 +12,14 @@ const wss = new WebSocket.Server({ server });
 
 // In-memory database (paper trades, positions, orders, reports)
 let state = {
+ // Simple health + state endpoints
+app.get('/api/health', (req, res) => res.json({ ok: true }));
+app.get('/api/state', (req, res) => res.json(state));
   mode: {
     crypto: "paper",  // or "live"
     stocks: "paper"
   },
-  fxRate: 83.0, // USD to INR (default, can update via API)
+  fxRate: 87.0, // USD to INR (default, can update via API)
   orders: [],
   positions: {},
   reports: []
