@@ -1,2 +1,2 @@
 # Unique-Auto-Trader
-Auto yrading App
+Auto Trading App
