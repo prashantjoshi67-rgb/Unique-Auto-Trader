@@ -1,0 +1,14 @@
+{
+  "name": "unique-auto-trader",
+  "version": "1.0.0",
+  "description": "Auto trading dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "ws": "^8.18.3",
+    "dotenv": "^17.2.1"
+  }
+}
