@@ -12,7 +12,11 @@ const wss = new WebSocket.Server({ server });
 
 // In-memory database (paper trades, positions, orders, reports)
 let state = {
- // Simple health + state endpoints
+// --- Health & debug endpoints ---
+app.get('/healthz', (req, res) => res.status(200).send('ok'));
+app.get('/api/health', (req, res) => res.json({ ok: true, time: new Date().toISOString() }));
+app.get('/api/state', (req, res) => res.json(state));
+// Simple health + state endpoints
 app.get('/api/health', (req, res) => res.json({ ok: true }));
 app.get('/api/state', (req, res) => res.json(state));
   mode: {
